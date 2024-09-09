@@ -13,7 +13,7 @@ const JsUser = {
     location: "surat",
     email:"Farhan@meta.com",
     isLoggedIn : false,  
-    lastLoginDays:["Monday", "Saturday"]
+    lastLoginDays:["Monday", "Saturday"] // array in object
 }
 console.log(JsUser.email)    // accessing using dot opeartor(.) first approach 
 console.log(JsUser["email"])  // accessing object values second approach
