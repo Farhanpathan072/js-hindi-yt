@@ -7,8 +7,8 @@ console.log(myArr[0]);
 
 // Array Methods
 
-myArr.push(6)
-myArr.push(7)
+myArr.push(6)  
+myArr.push(7)   
 myArr.pop()
 
 myArr.unshift(9)
