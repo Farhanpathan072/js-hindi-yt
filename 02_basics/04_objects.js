@@ -53,9 +53,11 @@ const course = {
 
 // course.courseInstructor
 
-const { courseInstructor } = course; // Object destructuring // first way
+const { courseInstructor, price ,coursename } = course; // Object destructuring // first way
 const { courseInstructor: instructor } = course; // Object destructuring // second way
 console.log(instructor);
+console.log(price);
+console.log(coursename);
 
 // {                                  <--------------  JSON INTRO -------------------->
 //     "name": "farhan",
