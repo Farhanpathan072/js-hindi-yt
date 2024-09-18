@@ -11,3 +11,5 @@
     console.log(`DB CONNECTED TWO ${name}`);
     
 })(`farhan`)
+
+console.log(this);
