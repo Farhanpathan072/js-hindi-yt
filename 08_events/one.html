@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2> Amazing Images
+        <div>
+            <ul id="images">
+                <li>
+                    <img src="https://i.pinimg.com/736x/14/8f/92/148f92a85b759c2ca8191f9af908721c.jpg" width="200px" id="flowers">
+                </li>
+                <li>
+                      <img src="https://i.pinimg.com/736x/da/cf/97/dacf97c8c38bbddb7c40fb32c26ed931.jpg" width="200px" id="nature">
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/736x/a3/4c/02/a34c02e54b592548c970974d74235042.jpg"  width="200px" id="sparrow" 
+                          alt="">
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/736x/48/15/74/481574f161767c5de9e39bea80d28cf4.jpg" width="200px" id="eagle"
+                    >
+                </li>
+                <li><a id ='google' style="color: aliceblue;" href="https://google.com">Google</a></li>
+            </ul>
+        </div>
+    </h2>
+</body>
+<script>
+    // document.getElementById("sparrow").onclick = function name() {
+        //     alert('sparrow')
+        // }
+
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget,
+        // clientX, clientY, screenX, screenY
+        // altkey, ctrlkey, shiftkey, keycode 
+    //  document.getElementById('images').addEventListener('click',function(e){
+    //   console.log('clicked inside the ul');
+    // }, false )
+    //  document.getElementById('sparrow').addEventListener('click',function(e){
+    //   console.log('clicked inside the sparrow');
+    //   e.stopPropagation()
+    // }, false )
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log('google clicked')
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName == 'IMG') {
+            console.log(e.target.id);
+            
+            let removeIt = e.target.parentNode
+             removeIt.remove()
+        }
+        
+    }, false)
+</script>
+</html>
