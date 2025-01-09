@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Card of Hitesh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    .card {
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      overflow: hidden;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h2 {
+      margin: 16px 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .card p {
+      margin: 0 16px 16px;
+      color: #555;
+      font-size: 1rem;
+    }
+    .card button {
+      margin: 16px 0;
+      padding: 10px 20px;
+      border: none;
+      background-color: #007BFF;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://avatars.githubusercontent.com/u/11613311?v=4">
+    <h2>Card Title</h2>
+    <p>Followers Count.</p>
+    <button id="followers">Followers</button>
+  </div>
+</body>
+<script>
+  requestUrl = 'https://github.com/hiteshchoudhary'
+   const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+          const data = JSON.parse(this.responseText)
+          console.log(typeof data);
+            console.log(data.followers);
+            
+        }
+    }
+    
+    xhr.send()
+  
+</script>
+</html>
