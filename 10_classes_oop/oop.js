@@ -22,10 +22,15 @@ function User(username, loginCount, isLoggedIn){
         this.username = username 
         this.loginCount = loginCount
         this.isLoggedIn = isLoggedIn
-        return this
+
+        this.greeting = function(){
+            console.log(`Welcome ${this.username}`)
+        }
+        // return this
 }
+
 
 const userOne = new User("Farhan", 12, true)
 const userTwo = new User("ChaiAurcode", 11, false)
-console.log(userOne);
-console.log(userTwo);
+console.log(userOne.constructor);
+// console.log(userTwo);
