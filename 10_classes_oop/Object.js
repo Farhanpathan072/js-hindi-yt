@@ -27,3 +27,4 @@ const tea = new createUser("tea", 250)
 
 chai.printMe()
 tea.printMe()
+
