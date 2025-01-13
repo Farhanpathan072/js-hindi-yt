@@ -17,3 +17,4 @@ Object Literal
 
 
 ## 4 pillars
+## OOPS concept basic is cleared.
