@@ -8,7 +8,7 @@ class User{
         
     }
     static   createId(){
-        return `123`
+        return `_123`
     }
 }
 
