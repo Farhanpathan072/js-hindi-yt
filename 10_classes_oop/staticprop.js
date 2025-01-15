@@ -7,13 +7,13 @@ class User{
         console.log(`Username:${this.username}`);
         
     }
-    static   createId(){
+     static createId(){
         return `_123`
     }
 }
 
 const farhan = new User("farhan")
-// console.log(farhan.createId());
+console.log(farhan.createId());
 
 class Teacher extends User{
     constructor(username, email){
